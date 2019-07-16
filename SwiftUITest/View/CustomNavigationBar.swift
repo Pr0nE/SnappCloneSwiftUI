@@ -35,17 +35,17 @@ struct CustomNavigationBar:View{
                         Rectangle()
                             .opacity(0)
                             .frame(width: 30,height: 30)
-                            .overlay(Image( self.appViewModel.currentAppState == .OverView ? "close" : "chevron-left")
+                            .overlay(Image( self.appViewModel.currentAppState == .OverView ? "close" : "arrow")
                                 .frame(width: 11,height: 19)
                             )
-                            .padding(.leading, 26)
+                            .padding(.leading, 17)
                             .tapAction{
                                 self.appViewModel.currentAppState = .SelectingStart
                         }
                         
-                        Image("magnify").frame(width: 22,height: 22).padding(.leading, 30).opacity(self.appViewModel.currentAppState == .OverView ? 0 : 1)
+                        Image("magnify").resizable().frame(width: 18,height: 18).padding(.leading, 15).opacity(self.appViewModel.currentAppState == .OverView ? 0 : 1)
                         Spacer()
-                        Image("menu").frame(width: 15,height: 15).padding(.trailing, 26)
+                        Image("menu").resizable().frame(width: 23,height: 17).padding(.trailing, 26)
                         
                         }
                         .padding(.top, bottomPadding)
@@ -56,7 +56,7 @@ struct CustomNavigationBar:View{
                 VStack{
                     Text(self.appViewModel.currentAppState == .SelectingStart ? "کجا هستید؟" : self.appViewModel.currentAppState == .SelectingFinal ? "کجا میروید؟" : "سفر به سلامت")
                         .font(Font.custom("IRANSansWeb", size: 12.6)).fontWeight(.medium)
-                        .padding(.top, 8 + bottomPadding)
+                        .padding(.top, 5 + bottomPadding)
                     
                     Spacer()
                 }

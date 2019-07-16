@@ -34,40 +34,16 @@ struct CustomLocationMarker:View{
                 .aspectRatio(contentMode: .fill)
             
             
-            
             }
             .tapAction {
                 // Location Selected
                 
                 switch self.appViewModel.currentAppState{
                 case .SelectingStart:
-                    // save start position
-                    
-                    let annot = MKPointAnnotation()
-                    annot.coordinate = CLLocationCoordinate2D(latitude: originalMapType.centerCoordinate.latitude , longitude: originalMapType.centerCoordinate.longitude)
-                    
-                    originalMapType.addAnnotation(annot)
-                    self.appViewModel.annotations.append(annot)
-                    
-                    originalMapType.setCenter(CLLocationCoordinate2D(latitude: originalMapType.centerCoordinate.latitude + 0.004  , longitude: originalMapType.centerCoordinate.longitude), animated: true)
-                    
                     
                     self.appViewModel.currentAppState = .SelectingFinal
                     
-                    
                 case .SelectingFinal:
-                    
-                    // save final position
-                    
-                    let annot = MKPointAnnotation()
-                    annot.coordinate = CLLocationCoordinate2D(latitude: originalMapType.centerCoordinate.latitude , longitude: originalMapType.centerCoordinate.longitude)
-                    
-                    originalMapType.addAnnotation(annot)
-                    self.appViewModel.annotations.append(annot)
-                    
-                    originalMapType.showAnnotations(self.appViewModel.annotations, animated: true)
-                    
-                    originalMapType.isUserInteractionEnabled = false
                     
                     self.appViewModel.currentAppState = .OverView
                     
@@ -77,18 +53,12 @@ struct CustomLocationMarker:View{
                     
                 }
                 
-                
-                
             }
             .padding(.bottom,-40)
             .background(Rectangle()
                 .fill(Color.black)
                 .cornerRadius(2)
-                .frame(width: 5, height: 29).padding(.top, 103))
-        
-        
-        
-        
+                .frame(width: 5, height: 30).padding(.top, 105))
         
     }
     

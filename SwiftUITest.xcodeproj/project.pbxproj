@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		111493A122DDB900000F5AE5 /* LocationHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111493A022DDB900000F5AE5 /* LocationHandler.swift */; };
 		11348F8A22B10B2600280AB3 /* IranSansMedium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 11348F8922B10B2600280AB3 /* IranSansMedium.ttf */; };
 		11348F8C22B10B9D00280AB3 /* IranSansRegular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 11348F8B22B10B9D00280AB3 /* IranSansRegular.ttf */; };
 		118C5D1D22B037080096D838 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118C5D1C22B037080096D838 /* MapView.swift */; };
@@ -29,6 +30,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		111493A022DDB900000F5AE5 /* LocationHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationHandler.swift; sourceTree = "<group>"; };
 		11348F8922B10B2600280AB3 /* IranSansMedium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = IranSansMedium.ttf; sourceTree = "<group>"; };
 		11348F8B22B10B9D00280AB3 /* IranSansRegular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = IranSansRegular.ttf; sourceTree = "<group>"; };
 		118C5D1C22B037080096D838 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
@@ -102,6 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				11BB1E8E22B2498B005B1875 /* Services.swift */,
+				111493A022DDB900000F5AE5 /* LocationHandler.swift */,
 				11BB1E9722B27A6C005B1875 /* Others.swift */,
 			);
 			path = Model;
@@ -233,6 +236,7 @@
 				11BB1E9A22B2885F005B1875 /* OverviewBottomView.swift in Sources */,
 				11BB1E9822B27A6C005B1875 /* Others.swift in Sources */,
 				11BB1E9E22B2894E005B1875 /* MainBottomView.swift in Sources */,
+				111493A122DDB900000F5AE5 /* LocationHandler.swift in Sources */,
 				11BB1EA022B289CE005B1875 /* CustomNavigationBar.swift in Sources */,
 				11BB1E9C22B288E5005B1875 /* CustomMarker.swift in Sources */,
 				11BB1E9622B26EAB005B1875 /* ServiceCellViewModel.swift in Sources */,

@@ -7,6 +7,7 @@
 //
 
 import SwiftUI
+import MapKit
 
 struct MainBottomView:View{
     
@@ -27,12 +28,12 @@ struct MainBottomView:View{
                     
                     Image("location")
                         
-                        .tapAction {
-                            originalMapType.showsUserLocation = true
-                            
-                        }.frame(width: 18, height: 18)
+                    .frame(width: 18, height: 18)
                     }.padding(.trailing, 20)
                     .opacity(self.appViewModel.currentAppState == .SelectingStart ? 1 : 0)
+                    .tapAction {
+                        self.appViewModel.locationManager.getUserLocation()
+                    }
                 
                 // MainBottomView
                 ZStack{
